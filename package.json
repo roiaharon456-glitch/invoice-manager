@@ -23,7 +23,6 @@
     "qrcode": "^1.5.4",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "puppeteer": "^22.0.0",
     "whatsapp-web.js": "^1.34.6"
   },
   "devDependencies": {
