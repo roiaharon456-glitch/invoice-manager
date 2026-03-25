@@ -22,7 +22,10 @@ export function initWA(): void {
   _lastError = null;
 
   _client = new Client({
-    authStrategy: new LocalAuth({ dataPath: ".wwebjs_auth" }),
+    authStrategy: new LocalAuth({
+      dataPath:
+        process.env.NODE_ENV === "production" ? "/data/.wwebjs_auth" : ".wwebjs_auth",
+    }),
     puppeteer: {
       headless: true,
       executablePath: executablePath(),
